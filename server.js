@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-//call the htmlRoutes function and pass in app
-htmlRoutes(app);
+//call the apiRoutes and htmlRoutes functions and pass in app
 apiRoutes(app);
+htmlRoutes(app);
 
 //start
 app.listen(PORT, function () {
