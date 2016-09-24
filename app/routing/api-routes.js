@@ -4,26 +4,23 @@ var key = require('../../keys.js');
 //node modules
 var path = require('path');
 var mysql = require('mysql');
-var dotenv = require('dotenv');
-
-//fire up dotenv
-dotenv.config();
 
 //sql connection
 var connection = mysql.createConnection({
-  host     : process.env.DB_HOST,
-  user     : process.env.DB_USER,
-  password : process.env.DB_PASS,
-  database : process.env.DB_NAME
+    host: "mydbinstance.coacymxlgea4.us-west-2.rds.amazonaws.com",
+    port: 3306,
+    user: "spencercharest",
+    password: key,
+    database: "friendFinder"
 });
 
 module.exports = function(app){
 
   app.get('/api/friends', function (req, res) {
-    //do something here to get data from MySql
-
-    //send some data from MySql
-    res.send('This is working!');
+    connection.query('SELECT * FROM friends', function(err, response){
+      if(err) throw err;
+      res.send(response);
+    });
   });
 
   app.post('/api/friends', function (req, res) {
