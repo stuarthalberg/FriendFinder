@@ -3,6 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 var htmlRoutes = require('./app/routing/html-routes.js');
+var apiRoutes = require('./app/routing/api-routes.js');
 //express setup
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 //call the htmlRoutes function and pass in app
 htmlRoutes(app);
+apiRoutes(app);
 
 //start
 app.listen(PORT, function () {

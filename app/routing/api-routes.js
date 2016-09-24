@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
     port: 3306,
     user: "spencercharest",
     password: key,
-    database: "Bamazon"
+    database: "friendFinder"
 });
 
 module.exports = function(app){
