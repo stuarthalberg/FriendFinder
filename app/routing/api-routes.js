@@ -24,10 +24,13 @@ module.exports = function(app){
   });
 
   app.post('/api/friends', function (req, res) {
+    console.log('HIT');
     var friend = req.body;
-    //do something to post data to MySql AND compare new friend to others in the DB
-
-    //send the compatible friend back to the user
-	  res.send();
+    console.log(friend);
+    connection.query('INSERT INTO friends SET ?', friend,
+      function(err){
+        if(err) throw err;
+        res.send('Success!');
+      });
   });
 };
