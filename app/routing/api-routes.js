@@ -2,7 +2,6 @@
 var key = require('../../keys.js');
 
 //node modules
-var path = require('path');
 var mysql = require('mysql');
 
 //sql connection
@@ -78,7 +77,7 @@ module.exports = function(app){
         connection.query('INSERT INTO friends SET ?', friend,
           function(err){
             if(err) throw err;
-          });
+        });
       });
   });
 };
