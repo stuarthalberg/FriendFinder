@@ -12,11 +12,12 @@ $(document).ready(function(){
       question7: parseInt($('#question7').val().replace(/[^0-9 | ^.]/g, '')),
       question8: parseInt($('#question8').val().replace(/[^0-9 | ^.]/g, '')),
       question9: parseInt($('#question9').val().replace(/[^0-9 | ^.]/g, '')),
-      question10: parseInt($('#question10').val().replace(/[^0-9 | ^.]/g, '')),
+      question10: parseInt($('#question10').val().replace(/[^0-9 | ^.]/g, ''))
     }
-    console.log(newFriend);
-    var currentURL = window.location.href;
-    $.post('http://localhost:3000/api/friends', newFriend)
+    $.post('http://localhost:3000/api/friends', newFriend).then(function(){
+      //change link to Heroku link
+      //modal pop up
+    });
       return false;
     });
 });
