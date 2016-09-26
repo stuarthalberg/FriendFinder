@@ -14,8 +14,9 @@ $(document).ready(function(){
       question9: parseInt($('#question9').val().replace(/[^0-9 | ^.]/g, '')),
       question10: parseInt($('#question10').val().replace(/[^0-9 | ^.]/g, ''))
     }
-    $.post('http://localhost:3000/api/friends', newFriend).then(function(){
+    $.post('http://localhost:3000/api/friends', newFriend).then(function(response){
       //change link to Heroku link
+      console.log(response);
       //modal pop up
     });
       return false;
