@@ -18,7 +18,11 @@ $(document).ready(function(){
       //change link to Heroku link
       console.log(response);
       //modal pop up
+      $('#match-image').attr('src', response.photo);
+      $('#match-name').text(response.name);
+      $('#message').text('You should be friends with ' + response.name + '!')
+      $('#modal').modal('show');
     });
       return false;
-    });
+  });
 });
