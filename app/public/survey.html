@@ -11,29 +11,33 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1>Survey</h1>
+      <div class="jumbotron" id="surveytron">
+        <h1 class="text-center">Survey</h1>
       </div>
 
       <div class="row">
         <div class="col-xs-12">
           <form>
-            <div class="form-group">
+            <div id="name-group" class="form-group">
               <label>Name (required)</label>
               <input type="text" class="form-control" id="name" placeholder="John Smith">
+              <span id="name-span" aria-hidden="true"></span>
             </div>
-            <div class="form-group">
+            <div id="photo-group"class="form-group">
               <label>Link to Photograph (required)</label>
               <input type="text" class="form-control" id="photo" placeholder="www.example.com/photo">
+              <span id="photo-span" aria-hidden="true"></span>
             </div>
           </form>
         </div>
       </div>
 
+      <hr>
+
       <div class="row">
         <div class="col-xs-12">
           <div class="panel panel-default">
-            <div class="panel-heading"> Personality Test</div>
+            <div class="panel-heading" id="panel-top"> Personality Test</div>
               <div class="panel-body">
                 <form>
                   <div class="form-group">
@@ -137,7 +141,15 @@
                     </select>
                   </div>
 
-                  <button class="btn" id="submit-button" type="submit">Submit</button>
+                  <div class="row">
+                    <div class="col-xs-1">
+                      <button class="btn" id="submit-button" type="submit" disabled="true">Submit</button>
+                    </div>
+                    <div class="col-xs-11">
+                      <h4 id="instructions">(name and photo link are required)<h4>
+                    </div>
+                  </div>
+
                 </form>
               </div>
           </div>
