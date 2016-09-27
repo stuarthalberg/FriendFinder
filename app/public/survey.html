@@ -140,16 +140,7 @@
                       <option>5 (strongly agree)</option>
                     </select>
                   </div>
-
-                  <div class="row">
-                    <div class="col-xs-1">
-                      <button class="btn" id="submit-button" type="submit" disabled="true">Submit</button>
-                    </div>
-                    <div class="col-xs-11">
-                      <h4 id="instructions">(name and photo link are required)<h4>
-                    </div>
-                  </div>
-
+                  <button class="btn" id="submit-button" type="submit" disabled="true">Submit</button>
                 </form>
               </div>
           </div>
@@ -161,12 +152,12 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h1 class="modal-title">You have a match!</h1>
+              <h1 class="modal-title text-center">You have a match!</h1>
             </div>
             <div class="modal-body">
-              <h1 id="match-name"></h1>
-              <img src="" alt="" id="match-image">
-              <h4 id="message"></h4>
+              <h1 id="match-name" class="text-center"></h1>
+              <img src="" alt="" id="match-image" class="img-responsive">
+              <h4 id="message" class="text-center"></h4>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
